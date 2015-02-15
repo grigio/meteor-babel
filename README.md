@@ -1,6 +1,6 @@
 # Meteor Babel
 
-Write javascript ES6 (http://git.io/es6features) in your Meteor app. A port of the Babel transpiler (previosly known as 6to5).
+Write javascript ES6 (http://git.io/es6features) in your Meteor app. A port of the [Babel](https://babeljs.io) transpiler (previosly known as 6to5).
 
 It also include a runtime to support features like function generators.
  
