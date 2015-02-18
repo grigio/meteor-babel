@@ -1,7 +1,7 @@
 Package.describe({
   name: 'grigio:babel',
   summary: 'Write javascript ES6 in your Meteor app',
-  version: '0.0.2',
+  version: '0.0.4',
   git: 'https://github.com/grigio/meteor-babel.git'
 });
 
@@ -13,18 +13,21 @@ Package.registerBuildPlugin({
     'plugin/compile-6to5.js'
   ],
   npmDependencies: {
-                      'babel':'4.0.1',
-                      'core-js':'0.5.4'
+                      'babel':'4.3.0'
                    }
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.0.3.1');
+  api.versionsFrom('1.0.2.1');
 
+  api.addFiles('lib/core-js.js');
   // runtime
   api.addFiles('lib/runtime.js');
 });
 
-Package.onTest(function(api) {
-
+Package.onTest(function (api) {
+  api.use(['grigio:babel', 'tinytest']);
+  api.addFiles([
+    'tests/basic_test.es6.js'
+  ], ['client', 'server']);
 });
