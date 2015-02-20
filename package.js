@@ -13,7 +13,7 @@ Package.registerBuildPlugin({
     'plugin/compile-6to5.js'
   ],
   npmDependencies: {
-                      'babel':'4.3.0'
+                      'babel-core':'4.3.0'
                    }
 });
 

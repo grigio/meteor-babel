@@ -1,4 +1,4 @@
-var to5 = Npm.require('babel');
+var to5 = Npm.require('babel-core');
 var handler = function (compileStep, isLiterate) {
 
   var source = compileStep.read().toString('utf8');
