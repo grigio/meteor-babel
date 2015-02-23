@@ -1,5 +1,7 @@
 # Meteor Babel
 
+*WARNING:* This package currently break some Meteor features. See [open issues](https://github.com/grigio/meteor-babel/issues?q=is%3Aopen).
+
 Write javascript ES6 (http://git.io/es6features) in your Meteor app. A port of the [Babel](https://babeljs.io) transpiler (previosly known as 6to5).
 
 It also include the runtime and core-js to support features like function generators, sets,..
