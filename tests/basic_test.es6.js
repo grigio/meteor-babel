@@ -59,3 +59,18 @@ Tinytest.add('Sets', function (test) {
   test.equal( s.has("hello"), true);
 });
 
+// Currently broken see: https://github.com/grigio/meteor-babel/issues/5
+Tinytest.add('Meteor - check Number (workaround)', function (test) {
+  // test.equal( check(666, Number ), true );
+  test.equal( check(666, new Number(666).valueOf()), undefined );
+});
+
+// blacklist: ["useStrict"]
+Tinytest.add('Meteor - global vars', function (test) {
+  (function () {
+    myVar = 'yes';
+  })();
+  test.equal( myVar , 'yes');
+});
+
+
