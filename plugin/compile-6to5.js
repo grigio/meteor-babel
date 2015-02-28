@@ -3,7 +3,7 @@ var handler = function (compileStep, isLiterate) {
 
   var source = compileStep.read().toString('utf8');
   var outputFile = compileStep.inputPath + ".js";
-  var to5output = to5.transform(source, { sourceMap: true });
+  var to5output = to5.transform(source, { blacklist: ["useStrict"], sourceMap: true });
 
   compileStep.addJavaScript({
     path: outputFile,
