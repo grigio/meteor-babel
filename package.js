@@ -13,14 +13,14 @@ Package.registerBuildPlugin({
     'plugin/compile-6to5.js'
   ],
   npmDependencies: {
-                      'babel-core':'4.3.0'
+                      'babel-core':'4.7.3'
                    }
 });
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0.2.1');
 
-  api.addFiles('lib/core-js.js');
+  api.addFiles('lib/core-js-no-number.js');
   // runtime
   api.addFiles('lib/runtime.js');
 });
