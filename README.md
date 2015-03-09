@@ -1,4 +1,4 @@
-# Meteor Babel
+# Meteor Babel [![Build Status](https://travis-ci.org/grigio/meteor-babel.svg?branch=master)](https://travis-ci.org/grigio/meteor-babel)
 
 *WARNING:* This package may break some normal Meteor usage. See [open issues](https://github.com/grigio/meteor-babel/issues?q=is%3Aopen).
 
@@ -17,7 +17,7 @@ meteor add grigio:babel
 Inside this package:
 
 ```
-meteor test-packages ./
+meteor test-packages ./ # or spacejam test-packages ./
 ```
 
 ## Usage
