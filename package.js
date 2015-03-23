@@ -1,7 +1,7 @@
 Package.describe({
   name: 'grigio:babel',
   summary: 'Write javascript ES6 in your Meteor app',
-  version: '0.0.11',
+  version: '0.0.12',
   git: 'https://github.com/grigio/meteor-babel.git'
 });
 
