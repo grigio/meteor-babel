@@ -59,6 +59,26 @@ Tinytest.add('Sets', function (test) {
   test.equal( s.has("hello"), true);
 });
 
+Tinytest.add('ES7 - async await', function (test, done) {
+  function sleep(ms){
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async function asyncValue(value){
+    await sleep(500);
+    return value;
+  }
+
+  Meteor.wrapAsync(function execute(args, onCompleted) {
+    (async function(){
+        var value = await asyncValue(42);
+        test.equal( value, 42);
+        // onCompleted();
+    })();
+  });
+
+});
+
 Tinytest.add('Meteor - check Number', function (test) {
   test.equal( check(666, Number ), undefined );
 });

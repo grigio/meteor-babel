@@ -6,6 +6,7 @@ var handler = function (compileStep, isLiterate) {
   var to5output = to5.transform(source, {
     blacklist: ["useStrict"],
     sourceMap: true,
+    experimental: true,
     filename: compileStep.pathForSourceMap
   });
 
