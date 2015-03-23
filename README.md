@@ -22,7 +22,7 @@ meteor test-packages ./ # or spacejam test-packages ./
 
 ## Usage
  
-accepted file extension es6.js, es6, es, jsx
+Accepted file extension `es6.js`, `es6`, `es`.
 
 ### License
 
