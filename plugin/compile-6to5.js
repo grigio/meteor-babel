@@ -18,8 +18,8 @@ var handler = function (compileStep, isLiterate) {
   });
 };
 
-Plugin.registerSourceHandler('es6.js', handler);
-Plugin.registerSourceHandler('es6', handler);
-Plugin.registerSourceHandler('es', handler);
+Plugin.registerSourceHandler('rip.js', handler);
+Plugin.registerSourceHandler('rip', handler);
+Plugin.registerSourceHandler('ri', handler);
 // see: use react-tools instead https://github.com/grigio/meteor-babel/issues/10
 // Plugin.registerSourceHandler('jsx', handler);
