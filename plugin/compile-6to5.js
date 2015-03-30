@@ -2,13 +2,24 @@ var to5 = Npm.require('babel-core');
 var handler = function (compileStep, isLiterate) {
   var source = compileStep.read().toString('utf8');
   var outputFile = compileStep.inputPath + ".js";
+  var to5output = "";
 
-  var to5output = to5.transform(source, {
-    blacklist: ["useStrict"],
-    sourceMap: true,
-    experimental: true,
-    filename: compileStep.pathForSourceMap
-  });
+  try {
+    to5output = to5.transform(source, {
+      blacklist: ["useStrict"],
+      sourceMap: true,
+      experimental: true,
+      filename: compileStep.pathForSourceMap
+    });
+  } catch (e) {
+    console.log(e); // Show the nicely styled babel error
+    return compileStep.error({
+      message: 'Babel transform error',
+      sourcePath: compileStep.inputPath,
+      line: e.loc.line,
+      column: e.loc.column
+    });
+  }
 
   compileStep.addJavaScript({
     path: outputFile,
