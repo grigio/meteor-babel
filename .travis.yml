@@ -6,4 +6,5 @@ before_install:
   - "curl https://install.meteor.com | /bin/sh"
   - "npm install -g spacejam"
 
+sudo: required
 script: "spacejam test-packages ./"
