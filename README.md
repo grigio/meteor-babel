@@ -12,6 +12,29 @@ It also include the `runtime` and `core-js` (without ES6 Number) in `lib/` to su
 meteor add grigio:babel
 ```
 
+## Configuration (optional)
+
+You can override the default config, just create a `babel.json` file in your project and override the default behavior. Then restart `meteor` to apply.
+
+```
+{
+  "debug": false,                         // print loaded config
+  "verbose": true,                        // print active file extensions
+  "extensions": ['es6.js', 'es6', 'jsx'], // babel managed extensions
+  "experimental": true                    // experimental ES7 support
+}
+
+```
+*NOTE*: If you use `reactjs:react` you must create `babel.json` and remove `jsx` from your `extensions`, to avoid `JSX` compilation conflict.
+
+```
+{
+...
+  "extensions": ['es6.js', 'es6'], // .jsx is compiled via react-tools in this case
+...
+}
+```
+
 ## Tests
 
 Inside this package:
@@ -20,9 +43,6 @@ Inside this package:
 meteor test-packages ./ # or spacejam test-packages ./
 ```
 
-## Usage
- 
-Accepted file extension `es6.js`, `es6`, `es`.
 
 ### License
 
