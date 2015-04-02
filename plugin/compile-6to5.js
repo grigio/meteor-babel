@@ -11,9 +11,9 @@ Object.merge = function(destination,source) {
 
 var defaultConfig = {
   "debug": false,                          // print loaded config
-  "verbose": true,                        // print active file extensions
-  "extensions": ['es6.js', 'es6', 'jsx'], // babel managed extensions
-  "experimental": true                    // experimental ES7 support
+  "verbose": true,                         // print active file extensions
+  "extensions": ['es6.js', 'es6', 'jsx'],  // babel managed extensions
+  "stage": 0                               // experimental ES7 support
 }
 
 var handler = function (compileStep, isLiterate) {
@@ -25,7 +25,7 @@ var handler = function (compileStep, isLiterate) {
     to5output = to5.transform(source, {
       blacklist: ["useStrict"],
       sourceMap: true,
-      experimental: config.experimental,
+      stage: config.stage,
       filename: compileStep.pathForSourceMap
     });
   } catch (e) {

@@ -21,7 +21,7 @@ You can override the default config, just create a `babel.json` file in your pro
   "debug": false,                         // print loaded config
   "verbose": true,                        // print active file extensions
   "extensions": ['es6.js', 'es6', 'jsx'], // babel managed extensions
-  "experimental": true                    // experimental ES7 support
+  "stage": 0                              // experimental ES7 support
 }
 
 ```
