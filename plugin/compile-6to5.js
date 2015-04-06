@@ -47,7 +47,7 @@ var handler = function (compileStep, isLiterate) {
 };
 
 // initialization once at `meteor` exec
-var appdir = process.env.PWD;
+var appdir = process.env.PWD || process.cwd();
 var filename = path.join(appdir,'babel.json');
 var userConfig = {};
 
