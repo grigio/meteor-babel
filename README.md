@@ -1,7 +1,5 @@
 # Meteor Babel [![Build Status](https://travis-ci.org/grigio/meteor-babel.svg?branch=master)](https://travis-ci.org/grigio/meteor-babel)
 
-*WARNING:* This package may break some normal Meteor usage. See [open issues](https://github.com/grigio/meteor-babel/issues?q=is%3Aopen).
-
 Write javascript ES6 (http://git.io/es6features) in your Meteor app. A port of the [Babel](https://babeljs.io) transpiler (previosly known as 6to5).
 
 It also include the `runtime` and `core-js` (without ES6 Number) in `lib/` to support features like function generators, sets,..
@@ -34,6 +32,13 @@ You can override the default config, just create a `babel.json` file in your pro
 ...
 }
 ```
+
+## Known issues
+
+Some ES6 ES7 features aren't available
+
+- import / export [#9](https://github.com/grigio/meteor-babel/issues/9)
+- Number [#5](https://github.com/grigio/meteor-babel/issues/5)
 
 ## Tests
 
