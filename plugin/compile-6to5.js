@@ -62,7 +62,7 @@ config.extensions.forEach(function(ext) {
 });
 
 if (config.verbose)
-  console.log("Babel active on file extensions: " + config.extensions.join(', '));
+  console.log("=> Babel active on file extensions: " + config.extensions.join(', '));
 
 if (config.debug) {
     console.log("\nBabel config:");
