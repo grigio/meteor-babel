@@ -29,9 +29,8 @@ var handler = function (compileStep, isLiterate) {
       filename: compileStep.pathForSourceMap
     });
   } catch (e) {
-    console.log(e); // Show the nicely styled babel error
     return compileStep.error({
-      message: 'Babel transform error',
+      message: e + "\n" + e.codeFrame,
       sourcePath: compileStep.inputPath,
       line: e.loc.line,
       column: e.loc.column
