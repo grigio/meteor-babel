@@ -49,6 +49,6 @@ meteor test-packages ./ # or spacejam test-packages ./
 ```
 
 
-### License
+### Credits
 
-Copyright (C) 2014 Luigi Maselli - http://grigio.org - MIT Licence
+Luigi Maselli - http://grigio.org  & [contributors](https://github.com/grigio/meteor-babel/graphs/contributors) - MIT Licence
