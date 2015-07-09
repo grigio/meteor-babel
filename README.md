@@ -1,8 +1,8 @@
 # Meteor Babel [![Build Status](https://travis-ci.org/grigio/meteor-babel.svg?branch=master)](https://travis-ci.org/grigio/meteor-babel)
 
-Write javascript ES6 (http://git.io/es6features) in your Meteor app. A port of the [Babel](https://babeljs.io) transpiler (previously known as 6to5).
+Write JavaScript ES6/ES2015 (http://git.io/es6features) in your Meteor app. A port of the [Babel](https://babeljs.io) transpiler (previously known as 6to5).
 
-It also include the `runtime` and `core-js` (without ES6 Number) in `lib/` to support features like function generators, sets,..
+It also includes the `runtime` and `core-js` (without ES6 Number) in `lib/` to support features like function generators, sets etc.
  
 ## Installation
  
