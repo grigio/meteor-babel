@@ -1,4 +1,4 @@
-# Meteor Babel (Deprecated)[![Build Status](https://travis-ci.org/grigio/meteor-babel.svg?branch=master)](https://travis-ci.org/grigio/meteor-babel)
+# Meteor Babel (Deprecated)
 
 Write javascript ES6 (http://git.io/es6features) in your Meteor app. A port of the [Babel](https://babeljs.io) transpiler (previously known as 6to5).
 
