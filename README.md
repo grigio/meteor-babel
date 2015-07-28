@@ -4,7 +4,7 @@ Write javascript ES6 (http://git.io/es6features) in your Meteor app. A port of t
 
 It also include the `runtime` and `core-js` (without ES6 Number) in `lib/` to support features like function generators, sets,..
 
-** Please consider to use the official MDG [babel package](https://atmospherejs.com/meteor/babel-compiler) **
+__Your regular `.js` files will take ES2015 syntax by default if you do `meteor add ecmascript`__
 
 ## Installation
 
