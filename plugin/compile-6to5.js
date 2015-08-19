@@ -22,12 +22,13 @@ var handler = function (compileStep, isLiterate) {
   var to5output = "";
 
   try {
-    to5output = to5.transform(source, {
+    var options = config.options || {};
+    to5output = to5.transform(source, Object.merge({
       blacklist: ["useStrict"],
       sourceMap: true,
       stage: config.stage,
       filename: compileStep.pathForSourceMap
-    });
+    }, options));
   } catch (e) {
     return compileStep.error({
       message: e + "\n" + e.codeFrame,
